@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import React from 'react';
+import Aside from './Aside';
 
-class Home extends Component {
-  render() {
-    return (
-      <div>
-        <button type="button" className="btn btn-dark mr-4"><Link className='connectLink' to="/forms">FORMULAIRE</Link></button>
-      </div>
-    );
-  }
-}
+const Home = () => (
+  < div >
+    <Aside />
+  </div >
+)
 
 export default Home;
