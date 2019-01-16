@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Col, Row, Container } from 'reactstrap';
+import { Col, Row, Container } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import '../styles/loginPage.css'
 
