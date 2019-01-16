@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
-import LoginPage from './components/loginPage';
+import LoginPage from './components/LoginPage';
 import Home from './components/Home'
 import DashboardContainer from './containers/DashboardContainer';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
