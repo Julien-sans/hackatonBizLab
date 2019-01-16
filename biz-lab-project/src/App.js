@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
-import LoginPage from './components/loginPage';
+import LoginPage from './components/LoginPage';
 import Home from './components/Home'
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
