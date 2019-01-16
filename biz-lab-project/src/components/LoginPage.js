@@ -24,23 +24,23 @@ class LoginPage extends Component {
                 <div className="mb-5 text-center">
                   <h2 className='titleLogin'>LOGIN TO CROWD CRAFT PLATFORM</h2>
                 </div>
-                <div class="input-group mb-4 w-100">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Email</span>
+                <div className="input-group mb-4 w-100">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text email" id="basic-addon1">Email</span>
                   </div>
-                  <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1"></input>
+                  <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"></input>
                 </div>
 
-                <div class="input-group mb-4 w-100">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Password</span>
+                <div className="input-group mb-4 w-100">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text password" id="basic-addon1">Password</span>
                   </div>
-                  <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1"></input>
+                  <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"></input>
                 </div>
 
                 <div className="d-flex flex-row mt-5">
                   <button type="button" className="btn btn-dark mr-4"><Link className='connectLink' to="/home">SE CONNECTER</Link></button>
-                  <div>If you are a new user: SignUp Here</div>
+                  <div className="newUser d-flex align-items-center">If you are a new user: SignUp Here</div>
                 </div>
               </div>
             </Col>

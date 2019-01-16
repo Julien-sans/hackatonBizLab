@@ -11,15 +11,20 @@
   font-size: 4em;
 }
 
-.titleLogin {
-    font-family: 'Anton', sans-serif;
+.newUser {
+  font-family: 'Helvetica';
 }
+
+.titleLogin {
+  font-family: 'Anton', sans-serif;
+}
+
 a {
   color: black;
 }
 
 .connectLink {
-  color: black;
+  color: white;
 }
 
 Button {
