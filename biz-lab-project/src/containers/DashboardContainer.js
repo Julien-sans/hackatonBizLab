@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import ProjetMonitoring from '../components/Dashboard/ProjectMonitoring';
+import DashboardGraphics from '../components/Dashboard/Graphics/DashboardGraphics';
 import  styled  from 'styled-components';
 import '../styles/projectMonitoring.scss';
 
@@ -11,24 +12,24 @@ const Title = styled.h1`
 class DashboardContainer extends Component {
   render() {
     return (
-      <Container fluid >
+      <Container fluid>
         <Row className="text-center mt-5">
           <Col>
             <Title>Mon Dashboard</Title>
           </Col>
         </Row>
-       
+        <Row>
+          <Col>
+            <DashboardGraphics />
+          </Col>
+        </Row>
         <Row id="project-monitoring">
           <Col>
             <ProjetMonitoring />
           </Col>
         </Row>
 
-        <Row>
-          <Col>
-          
-          </Col>
-        </Row>
+       
       </Container>
     );
   }
