@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
 import LoginPage from './components/LoginPage';
 import Home from './components/Home'
+import DashboardContainer from './containers/DashboardContainer';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -20,6 +20,7 @@ class App extends Component {
             path="/home"
             component={Home}
           />
+          <Route path="/dashboard" component={DashboardContainer} />
         </Switch>
       </BrowserRouter>
     );
