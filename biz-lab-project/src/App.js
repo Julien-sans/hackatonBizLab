@@ -20,7 +20,10 @@ class App extends Component {
             path="/home"
             component={Home}
           />
-          <Route path="/dashboard" component={DashboardContainer} />
+          <Route
+            path="/dashboard"
+            component={DashboardContainer}
+          />
         </Switch>
       </BrowserRouter>
     );
