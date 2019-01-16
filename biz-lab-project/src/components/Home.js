@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Aside from './Aside';
 
-class Home extends Component {
-  render() {
-    return (
-      <div>
-        abcd
-      </div>
-    );
-  }
-}
+const Home = () => (
+  < div >
+    <Aside />
+  </div >
+)
+
 
 export default Home;
