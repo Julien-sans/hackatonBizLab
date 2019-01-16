@@ -13,10 +13,12 @@
 
 .newUser {
   font-family: 'Helvetica';
+  color: black;
 }
 
 .titleLogin {
   font-family: 'Anton', sans-serif;
+  color: black;
 }
 
 a {

@@ -46,7 +46,7 @@ body :-ms-input-placeholder {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 80px 0;
   text-align: center;
@@ -68,7 +68,7 @@ form input {
   outline: 0;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.2);
-  width: 75%;
+  width: 90%;
   border-radius: 3px;
   padding: 10px 15px;
   margin: 0 auto 10px auto;
@@ -85,7 +85,7 @@ form input:hover {
 }
 form input:focus {
   background-color: white;
-  width: 75%;
+  width: 90%;
   color: #474747;
 }
 
@@ -94,7 +94,7 @@ form textarea {
   outline: 0;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.2);
-  width: 75%;
+  width: 90%;
   border-radius: 3px;
   padding: 10px 15px;
   margin: 0 auto 10px auto;
@@ -112,7 +112,7 @@ form textarea:hover {
 }
 form textarea:focus {
   background-color: white;
-  width: 75%;
+  width: 90%;
   color: #474747;
 }
 
