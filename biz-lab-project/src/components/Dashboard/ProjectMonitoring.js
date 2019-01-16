@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import { Container, Row, Col } from 'reactstrap';
 import { DragDropContext } from 'react-beautiful-dnd';
 import initialData from '../../data/initial-data';
 import Column from './Column';
 import  styled  from 'styled-components';
 
-const Container = styled.div`
+const Dnd = styled.div`
   display: flex;
+`;
+
+const Subtitle = styled.h2`
+  font-family: Helvetica;
+  font-weight: 900;
 `;
 
 class DashboardContainer extends Component{
@@ -81,20 +87,34 @@ class DashboardContainer extends Component{
 
   render() {
     return (
-      <DragDropContext 
-        onDragEnd={this.onDragEnd}
-        onDragStart={this.onDragStart}
-        onDragUpdate={this.onDragUpdate}
-      >
-        <Container>
-          {this.state.columnOrder.map((columnId) => {
-            const column = this.state.columns[columnId];
-            const tasks = column.taskIds.map(taskId => this.state.tasks[taskId]);
+      <Container fluid>
+         <Row>
+          <Col>
+            <Subtitle>Mes projets</Subtitle> 
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <DragDropContext 
+              onDragEnd={this.onDragEnd}
+              onDragStart={this.onDragStart}
+              onDragUpdate={this.onDragUpdate}
+            >
+              <Dnd>
+                {this.state.columnOrder.map((columnId) => {
+                  const column = this.state.columns[columnId];
+                  const tasks = column.taskIds.map(taskId => this.state.tasks[taskId]);
+            
+                  return <Column key={column.id} column={column} tasks={tasks} />
+                })}
+              </Dnd>
+            </DragDropContext>
+          </Col>
+        </Row>
+
       
-            return <Column key={column.id} column={column} tasks={tasks} />
-          })}
-        </Container>
-      </DragDropContext>
+      
+      </Container>
     );
   }
 }

@@ -4,24 +4,29 @@ import ProjetMonitoring from '../components/Dashboard/ProjectMonitoring';
 import  styled  from 'styled-components';
 import '../styles/projectMonitoring.scss';
 
-const Title = styled.h2`
+const Title = styled.h1`
   font-family: Helvetica;
   font-weight: 900;
 `;
-
-
 class DashboardContainer extends Component {
   render() {
     return (
-      <Container id="project-monitoring">
-        <Row>
+      <Container fluid >
+        <Row className="text-center mt-5">
           <Col>
-            <Title>Mes projets</Title> 
+            <Title>Mon Dashboard</Title>
           </Col>
         </Row>
-        <Row>
+       
+        <Row id="project-monitoring">
           <Col>
             <ProjetMonitoring />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+          
           </Col>
         </Row>
       </Container>

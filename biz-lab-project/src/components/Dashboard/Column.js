@@ -4,7 +4,7 @@ import { Droppable } from 'react-beautiful-dnd';
 import Task from './Task';
 
 const Container = styled.div`
-  margin: 15px 20px 20px 0px;
+  margin: 5px 20px 20px 0px;
   border-radius: 2px;
   background-color: lightgrey;
   width: 100%;
