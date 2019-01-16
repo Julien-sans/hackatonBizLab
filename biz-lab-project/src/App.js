@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { Button } from 'reactstrap';
+import LoginPage from './components/loginPage';
+import Home from './components/Home'
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Button color="danger">Danger!</Button>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={LoginPage}
+          />
+          <Route
+            exact
+            path="/home"
+            component={Home}
+          />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
