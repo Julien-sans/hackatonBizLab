@@ -79,12 +79,6 @@ class DashboardGraphics extends Component {
 		return (
 			<Container fluid>
 				<Row>
-					<Col>
-						<h2>Mon activité</h2>
-					</Col>
-				</Row>
-
-				<Row>
 					<Col lg="2"> 
 						<Background>
 							<Container>
@@ -115,13 +109,12 @@ class DashboardGraphics extends Component {
 						</Background>
 					</Col>
 				</Row>
-				<Row className="mt-5">
-					<Col lg="8">
+				<Row className="mt-3">
+					<Col lg="12">
 						<Background>
 							<Line data={lineData} />
 						</Background>
 					</Col>
-					
 				</Row>
 			</Container>
  
