@@ -33,7 +33,7 @@ class DashboardContainer extends Component {
 
 
   render() {
-    const { expanded, project } = this.props;
+    const { expanded } = this.props;
     const className = expanded ? 'fil' : 'fil fil--expanded'
     return (
       <div className={className} class="fil">

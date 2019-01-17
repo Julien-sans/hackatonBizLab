@@ -1,0 +1,19 @@
+$lato: Lato, sans-serif;
+$anton: Anton, sans-serif;
+$lightgrey: #D3D3D3;
+
+.titre {
+  font-family: $anton;
+  color: black;
+  text-align: center;
+}
+
+.textMini {
+  font-family: $lato;
+  color: $lightgrey;
+  text-align: center;
+}
+
+.text {
+  font-family: $lato;
+}
