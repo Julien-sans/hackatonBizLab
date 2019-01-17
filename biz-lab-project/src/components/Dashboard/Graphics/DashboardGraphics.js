@@ -73,12 +73,12 @@ padding: 20px;
 height: 100%;
 `;
 
-
-
 class DashboardGraphics extends Component {
 	render() {
 		const { project } = this.props;
 		let projectLength = project.length;
+		let projectName = project.map(project => project.name);
+		console.log(projectName)
 		return (
 			<Container fluid>
 				<Row>

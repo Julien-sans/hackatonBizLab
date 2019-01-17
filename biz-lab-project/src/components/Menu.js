@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/home.scss';
+import { Button } from 'reactstrap';
 import { connect } from 'react-redux';
 import { underMenu } from '../actions/aside';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -16,23 +17,24 @@ class Menu extends Component {
               <Link to="/dashboard#mesprojets" style={{ textDecoration: 'none' }}><li className="mb-1">Mes projets</li></Link>
             </ul>
             : ''}
-          <Link to="" style={{ textDecoration: 'none' }}><li className="my-2">Mon profil</li></Link>
-          <Link to="/forms" style={{ textDecoration: 'none' }}><li className="my-2">Créer un projet</li></Link>
-        </ul>
-      </div >
-    );
+            <Link to="" style={{ textDecoration: 'none' }}><li className="my-2">Mon profil</li></Link>
+            <Link to="/forms" style={{ textDecoration: 'none' }}><li className="my-2">Créer un projet</li></Link>
+            <Link to="/" style={{ textDecoration: 'none' }}><li className="my-2"><Button className="mt-5" color="secondary">SE DECONNECTER</Button></li></Link>            
+          </ul>
+        </div >
+      );
+    }
   }
-}
-
-const mapStateToProps = state => ({
-  isUnderMenuOpen: state.aside.isUnderMenuOpen
-})
-
-const mapDispatchToProps = {
-  underMenu
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Menu);
+  
+  const mapStateToProps = state => ({
+    isUnderMenuOpen: state.aside.isUnderMenuOpen
+  })
+  
+  const mapDispatchToProps = {
+    underMenu
+  }
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Menu);
