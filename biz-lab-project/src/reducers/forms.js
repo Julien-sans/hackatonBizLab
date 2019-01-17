@@ -3,6 +3,7 @@ import { EDITOR_INPUT_FORM } from '../actions/forms';
 import { CREATE_FORM } from '../actions/forms';
 
 const initialState = {
+  id: 3,
   name: '',
   description: '',
   type: '',
