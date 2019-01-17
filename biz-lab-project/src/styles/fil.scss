@@ -1,0 +1,7 @@
+.fil {
+  margin-left: 320px;
+  transition: 300ms ease-in-out;
+  &--expanded {
+      margin-left: 88px;
+    }
+}
