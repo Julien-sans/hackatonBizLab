@@ -38,7 +38,7 @@ class Aside extends Component {
                 </ul>
               </Col>
               <Col xs="10" className="d-flex align-items-end mb-3">
-                <span>Made with ❤ by <br />Eva, Julien & Maitetxu</span>
+                <span>Made with ❤ by <br />Eva, Julien, Alexis, Nelson & Maitetxu</span>
               </Col>
             </Row>
           </Container>
