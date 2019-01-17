@@ -25,7 +25,7 @@ class Forms extends Component {
   render() {
     return (
       <div class="wrapper">
-        <div class="container">
+        <div class="cont">
           <h1>PROJECT CREATION</h1>
           <form class="form" onSubmit={this.handleSubmit}>
             <input onChange={this.handleChange} name="name" className="my-4" type="text" placeholder="NOM DU PROJET"></input>
