@@ -3,6 +3,7 @@ import { Container, Row, Col, TabContent, TabPane, Nav, NavItem, NavLink } from 
 import ProjetMonitoring from '../components/Dashboard/ProjectMonitoring';
 import DashboardGraphics from '../components/Dashboard/Graphics/DashboardGraphics';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 import Aside from '../components/Aside'
 import classnames from 'classnames';
 import '../styles/projectMonitoring.scss';
@@ -26,12 +27,11 @@ class DashboardContainer extends Component {
     if (hash !== this.state.activeTab) {
       this.setState({ activeTab: hash })
     }
-
   }
 
 
   render() {
-    const { expanded } = this.props;
+    const { expanded, project } = this.props;
     const className = expanded ? 'fil' : 'fil fil--expanded'
     return (
       <div className={className} class="fil">
@@ -92,4 +92,10 @@ class DashboardContainer extends Component {
   }
 }
 
-export default DashboardContainer;
+const mapStateToProps = (state) => {
+  return {
+    expanded: state.aside.expanded
+  }
+};
+
+export default connect(mapStateToProps)(DashboardContainer);
