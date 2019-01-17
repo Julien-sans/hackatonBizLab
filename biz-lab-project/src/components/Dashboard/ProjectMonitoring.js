@@ -87,34 +87,20 @@ class DashboardContainer extends Component{
 
   render() {
     return (
-      <Container fluid>
-         <Row>
-          <Col>
-            <Subtitle>Mes projets</Subtitle> 
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <DragDropContext 
-              onDragEnd={this.onDragEnd}
-              onDragStart={this.onDragStart}
-              onDragUpdate={this.onDragUpdate}
-            >
-              <Dnd>
-                {this.state.columnOrder.map((columnId) => {
-                  const column = this.state.columns[columnId];
-                  const tasks = column.taskIds.map(taskId => this.state.tasks[taskId]);
-            
-                  return <Column key={column.id} column={column} tasks={tasks} />
-                })}
-              </Dnd>
-            </DragDropContext>
-          </Col>
-        </Row>
-
+      <DragDropContext 
+        onDragEnd={this.onDragEnd}
+        onDragStart={this.onDragStart}
+        onDragUpdate={this.onDragUpdate}
+      >
+        <Dnd>
+          {this.state.columnOrder.map((columnId) => {
+            const column = this.state.columns[columnId];
+            const tasks = column.taskIds.map(taskId => this.state.tasks[taskId]);
       
-      
-      </Container>
+            return <Column key={column.id} column={column} tasks={tasks} />
+          })}
+        </Dnd>
+      </DragDropContext>
     );
   }
 }

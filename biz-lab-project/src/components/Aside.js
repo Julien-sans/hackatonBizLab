@@ -17,7 +17,7 @@ class Aside extends Component {
                 <p className="titre ml-2 mt-2">CROWD CRAFT</p>
               </Col>
               <Col xs="3" onClick={toggleSidebar}>
-                <i className="fas fa-bars mt-4 ml-3"></i>
+                <i style={{ cursor: 'pointer' }} className="fas fa-bars mt-4 ml-3"></i>
               </Col>
             </Row>
             <Row>
@@ -29,8 +29,16 @@ class Aside extends Component {
               <Col>
               </Col>
             </Row>
-            <Row>
-              <Col>
+            <Row className="footer mb-3">
+              <Col xs="2">
+                <ul>
+                  <li style={{ cursor: 'pointer' }}><i class="fab fa-facebook-square fa-lg"></i></li>
+                  <li style={{ cursor: 'pointer' }}><i class="fab fa-github-square fa-lg"></i></li>
+                  <li style={{ cursor: 'pointer' }}><i class="fab fa-twitter-square fa-lg"></i></li>
+                </ul>
+              </Col>
+              <Col xs="10" className="d-flex align-items-end mb-3">
+                <span>Made with ❤ by <br />Eva, Julien & Maitetxu</span>
               </Col>
             </Row>
           </Container>
