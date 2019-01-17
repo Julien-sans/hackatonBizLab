@@ -1,41 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-weight: 300;
-}
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-  font-weight: 300;
-}
-body ::-webkit-input-placeholder {
-  /* WebKit browsers */
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-  font-weight: 300;
-}
-body :-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-  opacity: 1;
-  font-weight: 300;
-}
-body ::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-  opacity: 1;
-  font-weight: 300;
-}
-body :-ms-input-placeholder {
-  /* Internet Explorer 10+ */
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-  font-weight: 300;
-}
 .wrapper {
   background: #8A8A8A;
   background: linear-gradient(top left, #8A8A8A 0%, #474747 100%);
@@ -45,19 +7,6 @@ body :-ms-input-placeholder {
   width: 100%;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 80px 0;
-  text-align: center;
-}
-
-.container h1 {
-  font-size: 40px;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-put;
-  font-weight: 200;
-}
 form {
   padding: 20px 0;
   position: relative;
