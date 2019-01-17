@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, } from 'reactstrap';
+import { Container, Row, Col, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import ProjetMonitoring from '../components/Dashboard/ProjectMonitoring';
 import DashboardGraphics from '../components/Dashboard/Graphics/DashboardGraphics';
 import styled from 'styled-components';

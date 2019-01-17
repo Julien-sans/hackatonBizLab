@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
 import { DragDropContext } from 'react-beautiful-dnd';
 import initialData from '../../data/initial-data';
 import Column from './Column';
@@ -7,11 +6,6 @@ import  styled  from 'styled-components';
 
 const Dnd = styled.div`
   display: flex;
-`;
-
-const Subtitle = styled.h2`
-  font-family: Helvetica;
-  font-weight: 900;
 `;
 
 class DashboardContainer extends Component{

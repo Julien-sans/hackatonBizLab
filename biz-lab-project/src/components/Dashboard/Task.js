@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'reactstrap';
 import { Draggable } from 'react-beautiful-dnd';
 
 const SingleTask = styled.div`
