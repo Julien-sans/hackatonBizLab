@@ -1,0 +1,58 @@
+#Profile
+{
+  position: absolute;
+  background: linear-gradient(-45deg, rgba(88, 88, 88, 0.5), rgba(216, 216, 216, 0.5), rgba(189, 189, 189, 0.5), rgba(28, 28, 28, 0.5));
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#Profile .container
+{
+  text-align: center;
+  background: linear-gradient(-45deg, #585858, #D8D8D8, #BDBDBD, #1C1C1C);
+  background-size: 200%;
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  box-shadow: 1px 1px 10px #000000;
+}
+
+#Profile div
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#Profile .circularPicture
+{
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#Profile .circularPicture img
+{
+  width: auto;
+  height: 100%;
+  margin-left: -70px;
+}
+
+#Profile .profile
+{
+  font-size: 40px;
+  border: 1px;
+  font-family: 'Anton', sans-serif;
+}
+
+#Profile .profileList
+{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}

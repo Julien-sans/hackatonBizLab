@@ -3,10 +3,13 @@ import { Container, Row, Col, TabContent, TabPane, Nav, NavItem, NavLink } from 
 import ProjetMonitoring from '../components/Dashboard/ProjectMonitoring';
 import DashboardGraphics from '../components/Dashboard/Graphics/DashboardGraphics';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 import Aside from '../components/Aside'
 import classnames from 'classnames';
 import '../styles/projectMonitoring.scss';
 import '../styles/fil.scss';
+import '../styles/dashboard.css';
+import { Link } from 'react-router-dom';
 
 const Title = styled.h1`
 font-family: Helvetica;
@@ -26,7 +29,6 @@ class DashboardContainer extends Component {
     if (hash !== this.state.activeTab) {
       this.setState({ activeTab: hash })
     }
-
   }
 
 
@@ -40,6 +42,7 @@ class DashboardContainer extends Component {
           <Row className="text-center mt-5">
             <Col>
               <Title>Mon Dashboard</Title>
+              <Link to="/profile" className="backToProfile">Voir mon profil</Link>
             </Col>
           </Row>
           <Row>
@@ -92,4 +95,10 @@ class DashboardContainer extends Component {
   }
 }
 
-export default DashboardContainer;
+const mapStateToProps = (state) => {
+  return {
+    expanded: state.aside.expanded
+  }
+};
+
+export default connect(mapStateToProps)(DashboardContainer);

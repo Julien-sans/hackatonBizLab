@@ -33,9 +33,9 @@ class Aside extends Component {
             <Row className="footer mb-3">
               <Col xs="2">
                 <ul>
-                  <li style={{ cursor: 'pointer' }}><i class="fab fa-facebook-square fa-lg"></i></li>
-                  <li style={{ cursor: 'pointer' }}><i class="fab fa-github-square fa-lg"></i></li>
-                  <li style={{ cursor: 'pointer' }}><i class="fab fa-twitter-square fa-lg"></i></li>
+                  <li style={{ cursor: 'pointer' }}><i className="fab fa-facebook-square fa-lg"></i></li>
+                  <li style={{ cursor: 'pointer' }}><i className="fab fa-github-square fa-lg"></i></li>
+                  <li style={{ cursor: 'pointer' }}><i className="fab fa-twitter-square fa-lg"></i></li>
                 </ul>
               </Col>
               <Col xs="10" className="d-flex align-items-end mb-3">
