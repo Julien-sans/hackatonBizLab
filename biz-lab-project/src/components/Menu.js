@@ -10,6 +10,7 @@ class Menu extends Component {
     return (
       <div>
         <ul className="ml-5">
+          <Link to="/home" style={{ textDecoration: 'none' }}><li className="my-2">Fil d'actualité</li></Link>
           <li className="my-2" style={{ cursor: "pointer" }} onClick={underMenu}>Mon dashboard&nbsp;&nbsp;&nbsp;<i class="fas fa-caret-down"></i></li>          {isUnderMenuOpen ?
             <ul className="ml-4">
               <Link to="/dashboard#vuedensemble" style={{ textDecoration: 'none' }}><li>Vue d'ensemble</li></Link>

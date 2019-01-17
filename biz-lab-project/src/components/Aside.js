@@ -4,6 +4,7 @@ import '../styles/home.scss';
 import Menu from '../components/Menu';
 import { toggleSidebar } from '../actions/aside';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class Aside extends Component {
   render() {
@@ -14,7 +15,7 @@ class Aside extends Component {
           <Container>
             <Row>
               <Col xs="9">
-                <p className="titre ml-2 mt-2">CROWD CRAFT</p>
+                <Link to="home" style={{textDecoration: 'none'}}><p className="titre ml-2 mt-2">CROWD CRAFT</p></Link>
               </Col>
               <Col xs="3" onClick={toggleSidebar}>
                 <i style={{ cursor: 'pointer' }} className="fas fa-bars mt-4 ml-3"></i>
