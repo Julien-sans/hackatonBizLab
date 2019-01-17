@@ -69,7 +69,7 @@ form input {
   outline: 0;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.2);
-  width: 90%;
+  width: 70%;
   border-radius: 3px;
   padding: 10px 15px;
   margin: 0 auto 10px auto;
@@ -95,7 +95,7 @@ form textarea {
   outline: 0;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.2);
-  width: 90%;
+  width: 70%;
   border-radius: 3px;
   padding: 10px 15px;
   margin: 0 auto 10px auto;
@@ -113,7 +113,7 @@ form textarea:hover {
 }
 form textarea:focus {
   background-color: white;
-  width: 90%;
+  width: 70%;
   color: #474747;
 }
 
@@ -221,6 +221,11 @@ form button:hover {
 
 .competences {
   height: 200px;
+}
+
+.projectTitle {
+  text-align: center;
+  margin-top: 100px;
 }
 
 @keyframes square {
