@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import '../styles/forms.css';
+import Aside from './Aside'
 import { connect } from 'react-redux';
 import { editorInputForm, createProject } from '../actions/forms';
+import '../styles/fil.scss'
 
 class Forms extends Component {
 
@@ -22,11 +24,14 @@ class Forms extends Component {
   }
 
   render() {
+    const { expanded } = this.props;
+    const className = expanded ? 'fil' : 'fil fil--expanded'
     return (
-      <div class="wrapper">
-        <div class="cont">
-          <h1>PROJECT CREATION</h1>
-          <form class="form" onSubmit={this.handleSubmit}>
+      <div className="wrapper">
+        <Aside />
+        <div class="cont" className={className}>
+          <h1 className="projectTitle">PROJECT CREATION</h1>
+          <form className="form" onSubmit={this.handleSubmit}>
             <input onChange={this.handleChange} name="name" className="my-4" type="text" placeholder="NOM DU PROJET"></input>
             <textarea onChange={this.handleChange} name="description" className="projectDescription my-4" type="text" placeholder="DESCRIPTION DU PROJET"></textarea>
             <input onChange={this.handleChange} name="type" className="my-4" type="text" placeholder="TYPE DE PROJET"></input>
@@ -34,7 +39,9 @@ class Forms extends Component {
             <input onChange={this.handleChange} name="lien" className="my-4" type="text" placeholder="LIEN GITHUB"></input>
             <input onChange={this.handleChange} name="equipe" className="my-4" type="text" placeholder="EQUIPE"></input>
             <input onChange={this.handleChange} name="initiateur" className="my-4" type="text" placeholder="INITIATEUR"></input>
-            <button className="my-4" type="submit" id="login-button">SUBMIT</button>
+            <div className="d-flex justify-content-center">
+              <button className="my-4" type="submit" id="login-button">SUBMIT</button>
+            </div>
           </form>
         </div>
       </div>
@@ -45,6 +52,7 @@ class Forms extends Component {
 const mapStateToProps = (state) => {
   const { name, description, type, competence, lien, equipe, initiateur } = state;
   return {
+    expanded: state.aside.expanded,
     form: {
       name,
       description,
