@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LoginPage from './components/LoginPage';
 import Home from './components/Home'
+import Forms from './components/Forms';
 import DashboardContainer from './containers/DashboardContainer';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
@@ -21,9 +22,13 @@ class App extends Component {
             component={Home}
           />
           <Route
-            path="/dashboard"
-            component={DashboardContainer}
+            exact
+            path="/forms"
+            component={Forms}
           />
+          <Route 
+            path="/dashboard" 
+            component={DashboardContainer} />
         </Switch>
       </BrowserRouter>
     );
