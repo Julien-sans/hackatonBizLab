@@ -1,7 +1,7 @@
 #Profile
 {
   position: absolute;
-  background-color: blue;
+  background: linear-gradient(-45deg, rgba(88, 88, 88, 0.5), rgba(216, 216, 216, 0.5), rgba(189, 189, 189, 0.5), rgba(28, 28, 28, 0.5));
   top: 0;
   bottom: 0;
   left: 0;
@@ -11,14 +11,14 @@
 #Profile .container
 {
   text-align: center;
-  overflow: hidden;
   background: linear-gradient(-45deg, #585858, #D8D8D8, #BDBDBD, #1C1C1C);
   background-size: 200%;
   position: absolute;
-  left: 50%;
+  left: 60%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
+  box-shadow: 1px 1px 10px #000000;
 }
 
 #Profile div
@@ -48,4 +48,11 @@
 {
   font-size: 40px;
   border: 1px;
+  font-family: 'Anton', sans-serif;
+}
+
+#Profile .profileList
+{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
 }

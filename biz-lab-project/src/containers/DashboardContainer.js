@@ -6,7 +6,9 @@ import styled from 'styled-components';
 import Aside from '../components/Aside'
 import classnames from 'classnames';
 import '../styles/projectMonitoring.scss';
-import '../styles/fil.scss'
+import '../styles/fil.scss';
+import '../styles/dashboard.css';
+import { Link } from 'react-router-dom';
 
 const Title = styled.h1`
 font-family: Helvetica;
@@ -39,6 +41,7 @@ class DashboardContainer extends Component {
           <Row className="text-center mt-5">
             <Col>
               <Title>Mon Dashboard</Title>
+              <Link to="/profile" className="backToProfile">Voir mon profil</Link>
             </Col>
           </Row>
           <Row>
