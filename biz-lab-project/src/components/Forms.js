@@ -21,7 +21,9 @@ class Forms extends Component {
   handleSubmit(e) {
     const { form } = this.props;
     e.preventDefault();
+    console.log(form)
     this.props.createProject(form);
+    form.id = form.id + 1;
   }
 
   render() {
@@ -52,14 +54,16 @@ class Forms extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { name, description, type, competence, lien, equipe, initiateur } = state;
+const { id, name, description, type, competences, lien, equipe, initiateur } = state.forms;
   return {
     expanded: state.aside.expanded,
+    project: state.forms.project,
     form: {
+      id,
       name,
       description,
       type,
-      competence,
+      competences,
       lien,
       equipe,
       initiateur,

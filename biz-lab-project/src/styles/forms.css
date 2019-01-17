@@ -1,10 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+/* @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-weight: 300;
-}
+} */
+
 .wrapper {
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
@@ -38,7 +39,7 @@
 }
 .wrapper {
   background: #8A8A8A;
-  background: linear-gradient(top left, #8A8A8A 0%, #474747 100%);
+  background: linear-gradient(to left, #8A8A8A 0%, #474747 100%);
   background: linear-gradient(to bottom right, #8A8A8A 0%, #474747 100%);
   position: absolute;
   left: 0;
@@ -85,7 +86,7 @@ form input:hover {
 }
 form input:focus {
   background-color: white;
-  width: 90%;
+  width: 70%;
   color: #474747;
 }
 

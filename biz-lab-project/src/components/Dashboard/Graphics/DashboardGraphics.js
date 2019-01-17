@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 import {Doughnut, Bar, Line} from 'react-chartjs-2';
 
 const doughnutData = {
@@ -12,14 +13,14 @@ const doughnutData = {
 	datasets: [{
 		data: [300, 50, 100],
 		backgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
+			'#FF6384',
+			'#36A2EB',
+			'#FFCE56'
 		],
 		hoverBackgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
+			'#FF6384',
+			'#36A2EB',
+			'#FFCE56'
 		]
 	}]
 };
@@ -40,51 +41,53 @@ const barData = {
 };
 
 const lineData = {
-  labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
-  datasets: [
-    {
-      label: 'Janvier',
-      fill: true,
-      lineTension: 0.1,
-      backgroundColor: 'rgba(75,192,192,0.4)',
-      borderColor: 'rgba(75,192,192,1)',
-      borderCapStyle: 'butt',
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      pointBorderColor: 'rgba(75,192,192,1)',
-      pointBackgroundColor: '#fff',
-      pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-      pointHoverBorderColor: 'rgba(220,220,220,1)',
-      pointHoverBorderWidth: 2,
-      pointRadius: 1,
-      pointHitRadius: 10,
-      data: [65, 59, 80, 81, 56, 55, 40, 12, 45, 30, 58, 62, 75, 75, 75, 48, 30, 35, 19, 22, 28, 45, 56, 54, 50, 60, 62, 57, 40, 36, 42, 47]
-    }
-  ]
+	labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+	datasets: [
+		{
+			label: 'Janvier',
+			fill: true,
+			lineTension: 0.1,
+			backgroundColor: 'rgba(75,192,192,0.4)',
+			borderColor: 'rgba(75,192,192,1)',
+			borderCapStyle: 'butt',
+			borderDash: [],
+			borderDashOffset: 0.0,
+			borderJoinStyle: 'miter',
+			pointBorderColor: 'rgba(75,192,192,1)',
+			pointBackgroundColor: '#fff',
+			pointBorderWidth: 1,
+			pointHoverRadius: 5,
+			pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+			pointHoverBorderColor: 'rgba(220,220,220,1)',
+			pointHoverBorderWidth: 2,
+			pointRadius: 1,
+			pointHitRadius: 10,
+			data: [65, 59, 80, 81, 56, 55, 40, 12, 45, 30, 58, 62, 75, 75, 75, 48, 30, 35, 19, 22, 28, 45, 56, 54, 50, 60, 62, 57, 40, 36, 42, 47]
+		}
+	]
 };
 
 const Background = styled.div`
-	background-color: lightgrey;
-	padding: 20px;
-	height: 100%;
+background-color: lightgrey;
+padding: 20px;
+height: 100%;
 `;
 
 
 
 class DashboardGraphics extends Component {
 	render() {
+		const { project } = this.props;
+		let projectLength = project.length;
 		return (
 			<Container fluid>
 				<Row>
-					<Col lg="2"> 
+					<Col lg="2">
 						<Background>
 							<Container>
 								<Row>
 									<Col className="text-center">
-										<h2  className="m-0" style={{fontSize: '10em'}}>5</h2>
+										<h2  className="m-0" style={{fontSize: '7em'}}>{projectLength}</h2>
 										<h4 className="m-0">projets</h4>
 									</Col>
 								</Row>
@@ -96,16 +99,16 @@ class DashboardGraphics extends Component {
 							<Doughnut data={doughnutData} />
 						</Background>
 					</Col>
-					<Col lg="6"> 
+					<Col lg="6">
 						<Background>
-						<Bar
-							data={barData}
-							width={100}
-							height={50}
-							options={{
-								maintainAspectRatio: false
-							}}
-						/>
+							<Bar
+								data={barData}
+								width={100}
+								height={50}
+								options={{
+									maintainAspectRatio: false
+								}}
+							/>
 						</Background>
 					</Col>
 				</Row>
@@ -117,9 +120,16 @@ class DashboardGraphics extends Component {
 					</Col>
 				</Row>
 			</Container>
- 
+
 		);
 	}
 }
 
-export default DashboardGraphics;
+const mapStateToProps = (state) => {
+	return {
+		expanded: state.aside.expanded,
+		project: state.forms.project
+	}
+};
+
+export default connect(mapStateToProps)(DashboardGraphics);
