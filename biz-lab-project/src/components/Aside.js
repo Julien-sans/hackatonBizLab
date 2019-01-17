@@ -5,6 +5,7 @@ import Menu from '../components/Menu';
 import { toggleSidebar } from '../actions/aside';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import LogoCrowdCraft from '../images/crowdcraftlogo.png';
 
 class Aside extends Component {
   render() {
@@ -15,7 +16,7 @@ class Aside extends Component {
           <Container>
             <Row>
               <Col xs="9">
-                <Link to="home" style={{textDecoration: 'none'}}><p className="titre ml-2 mt-2">CROWD CRAFT</p></Link>
+                <Link to="home" style={{textDecoration: 'none'}}><img src={LogoCrowdCraft} className="w-100 pt-3 pb-3" alt="Logo Crowd Craft" /></Link>
               </Col>
               <Col xs="3" onClick={toggleSidebar}>
                 <i style={{ cursor: 'pointer' }} className="fas fa-bars mt-4 ml-3"></i>
