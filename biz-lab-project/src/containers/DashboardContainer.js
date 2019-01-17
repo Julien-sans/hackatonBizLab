@@ -3,12 +3,14 @@ import { Container, Row, Col, TabContent, TabPane, Nav, NavItem, NavLink } from 
 import ProjetMonitoring from '../components/Dashboard/ProjectMonitoring';
 import DashboardGraphics from '../components/Dashboard/Graphics/DashboardGraphics';
 import styled from 'styled-components';
+import Aside from '../components/Aside'
 import classnames from 'classnames';
 import '../styles/projectMonitoring.scss';
+import '../styles/fil.scss'
 
 const Title = styled.h1`
-  font-family: Helvetica;
-  font-weight: 900;
+font-family: Helvetica;
+font-weight: 900;
 `;
 
 class DashboardContainer extends Component {
@@ -28,7 +30,11 @@ class DashboardContainer extends Component {
     }
   }
   render() {
+    const { expanded } = this.props;
+    const className = expanded ? 'fil' : 'fil fil--expanded'
     return (
+      <div className={className} class="fil">
+        <Aside />
         <Container className="mb-5">
           <Row className="text-center mt-5">
             <Col>
@@ -43,7 +49,7 @@ class DashboardContainer extends Component {
                     className={classnames({ active: this.state.activeTab === '1' })}
                     onClick={() => { this.toggle('1'); }}
                     style={{color: 'black'}}
-                  >
+                    >
 
                       Mon activité
                     </NavLink>
@@ -53,32 +59,33 @@ class DashboardContainer extends Component {
                       className={classnames({ active: this.state.activeTab === '2' })}
                       onClick={() => { this.toggle('2'); }}
                       style={{color: 'black'}}
-                    >
-                      Mes projets
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </Col>
-          </Row>
-          <TabContent activeTab={this.state.activeTab}>
-            <TabPane tabId="1" className="mt-5">
-              <Row>
-                <Col>
-                  <DashboardGraphics />
+                      >
+                        Mes projets
+                      </NavLink>
+                    </NavItem>
+                  </Nav>
                 </Col>
               </Row>
-            </TabPane>
-            <TabPane tabId="2" className="mt-5">
-              <Row>
-                <Col>
-                  <ProjetMonitoring />
-                </Col>
-              </Row>
-            </TabPane>
-          </TabContent>
-        </Container>
-    );
-  }
-}
+              <TabContent activeTab={this.state.activeTab}>
+                <TabPane tabId="1" className="mt-5">
+                  <Row>
+                    <Col>
+                      <DashboardGraphics />
+                    </Col>
+                  </Row>
+                </TabPane>
+                <TabPane tabId="2" className="mt-5">
+                  <Row>
+                    <Col>
+                      <ProjetMonitoring />
+                    </Col>
+                  </Row>
+                </TabPane>
+              </TabContent>
+            </Container>
+          </div>
+        );
+      }
+    }
 
-export default DashboardContainer;
+    export default DashboardContainer;

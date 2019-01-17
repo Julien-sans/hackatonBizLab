@@ -10,9 +10,10 @@ class Menu extends Component {
     return (
       <div>
         <ul className="ml-5">
-          <li className="my-2" style={{ cursor: "pointer" }} onClick={underMenu}>Mon dashboard&nbsp;&nbsp;&nbsp;<i class="fas fa-caret-down"></i></li>
+          
           {isUnderMenuOpen ?
             <ul className="ml-4">
+              <Link to="/dashboard" style={{ textDecoration: 'none' }}><li className="my-2">Mon dashboard</li></Link>
               <Link to="" style={{ textDecoration: 'none' }}><li className="mb-1">Mes projets</li></Link>
               <Link to="" style={{ textDecoration: 'none' }}><li>Vue d'ensemble</li></Link>
             </ul>
