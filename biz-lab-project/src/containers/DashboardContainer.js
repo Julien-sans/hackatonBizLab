@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Aside from '../components/Aside'
 import classnames from 'classnames';
 import '../styles/projectMonitoring.scss';
-import '../styles/fil.scss'
+import '../styles/fil.scss';
 
 const Title = styled.h1`
 font-family: Helvetica;
@@ -16,19 +16,20 @@ font-weight: 900;
 class DashboardContainer extends Component {
   constructor(props) {
     super(props);
-
-    this.toggle = this.toggle.bind(this);
     this.state = {
-      activeTab: '1'
+      activeTab: 'vuedensemble'
     };
   }
-  toggle(tab) {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab
-      });
+
+  componentDidUpdate() {
+    const hash = this.props.location.hash.substr(1)
+    if (hash !== this.state.activeTab) {
+      this.setState({ activeTab: hash })
     }
+
   }
+
+
   render() {
     const { expanded } = this.props;
     const className = expanded ? 'fil' : 'fil fil--expanded'
@@ -47,45 +48,48 @@ class DashboardContainer extends Component {
                 <NavItem>
                   <NavLink
                     className={classnames({ active: this.state.activeTab === '1' })}
-                    onClick={() => { this.toggle('1'); }}
-                    style={{color: 'black'}}
-                    >
-
-                      Mon activité
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({ active: this.state.activeTab === '2' })}
-                      onClick={() => { this.toggle('2'); }}
-                      style={{color: 'black'}}
-                      >
-                        Mes projets
-                      </NavLink>
-                    </NavItem>
-                  </Nav>
+                    onClick={() => { this.props.history.push('#vuedensemble'); }}
+                    style={{ color: 'black', cursor: 'pointer' }}
+                  >
+                    <div id="vuedensemble">
+                      Vue d'ensemble
+                    </div>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    className={classnames({ active: this.state.activeTab === '2' })}
+                    onClick={() => { this.props.history.push('#mesprojets') }}
+                    style={{ color: 'black', cursor: 'pointer' }}
+                  >
+                    <div id="mesprojets">
+                      Mes projets
+                    </div>
+                  </NavLink>
+                </NavItem>
+              </Nav>
+            </Col>
+          </Row>
+          <TabContent activeTab={this.state.activeTab}>
+            <TabPane tabId="vuedensemble" className="mt-5">
+              <Row>
+                <Col>
+                  <DashboardGraphics />
                 </Col>
               </Row>
-              <TabContent activeTab={this.state.activeTab}>
-                <TabPane tabId="1" className="mt-5">
-                  <Row>
-                    <Col>
-                      <DashboardGraphics />
-                    </Col>
-                  </Row>
-                </TabPane>
-                <TabPane tabId="2" className="mt-5">
-                  <Row>
-                    <Col>
-                      <ProjetMonitoring />
-                    </Col>
-                  </Row>
-                </TabPane>
-              </TabContent>
-            </Container>
-          </div>
-        );
-      }
-    }
+            </TabPane>
+            <TabPane tabId="mesprojets" className="mt-5">
+              <Row>
+                <Col>
+                  <ProjetMonitoring />
+                </Col>
+              </Row>
+            </TabPane>
+          </TabContent>
+        </Container>
+      </div>
+    );
+  }
+}
 
-    export default DashboardContainer;
+export default DashboardContainer;
