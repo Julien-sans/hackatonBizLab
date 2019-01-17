@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 import aside from './aside'
+import forms from './forms'
 
 const reducer = combineReducers({
-  aside
+  aside, forms
 });
 
 export default reducer;
