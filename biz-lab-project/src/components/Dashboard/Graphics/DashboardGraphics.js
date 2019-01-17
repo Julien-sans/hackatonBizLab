@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import styled from 'styled-components';
 import {Doughnut, Bar, Line} from 'react-chartjs-2';

@@ -34,7 +34,7 @@ main {
   background: linear-gradient(-45deg, #585858, #D8D8D8, #BDBDBD, #1C1C1C);
   background-size: 200%;
   background-position: 0 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -42,13 +42,13 @@ main {
   transition: 300ms ease-in-out;
   z-index: 1;
   overflow: hidden;
-  
+
   &--expanded {
     background-size: 100%;
     background-position: 0 0;
     transform: translateX(0);
   }
-  
+
   &:hover {
     background-position: 0 0;
   }
@@ -71,7 +71,7 @@ main {
   padding-right: 1.8rem;
   padding-bottom: 0;
   transition: 300ms ease;
-  
+
   &:focus {
     outline: none;
   }
@@ -105,7 +105,7 @@ ul {
   list-style: none;
   li {
     font-family: $lato;
-    font-size: 1rem;  
+    font-size: 1rem;
     color: white;
     &:hover {
       color: black;
@@ -122,10 +122,10 @@ i{
 //Footer
 
 .footer {
-  position: fixed; 
+  position: fixed;
   bottom: 0;
   font-family: $lato;
-  font-size: 0.8rem;  
+  font-size: 0.8rem;
   color: white;
 
 }

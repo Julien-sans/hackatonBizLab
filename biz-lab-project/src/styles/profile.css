@@ -1,11 +1,24 @@
 #Profile
 {
+  position: absolute;
+  background-color: blue;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#Profile .container
+{
   text-align: center;
-  margin-top: 10%;
+  overflow: hidden;
   background: linear-gradient(-45deg, #585858, #D8D8D8, #BDBDBD, #1C1C1C);
   background-size: 200%;
-  background-position: 0 90%;
-  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
 }
 
 #Profile div
