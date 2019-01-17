@@ -54,7 +54,7 @@ class Forms extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { id, name, description, type, competences, lien, equipe, initiateur } = state.forms;
+const { id, name, description, type, competences, lien, equipe, initiateur } = state.forms;
   return {
     expanded: state.aside.expanded,
     project: state.forms.project,
