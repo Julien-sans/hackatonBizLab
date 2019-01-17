@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LoginPage from './components/LoginPage';
-import Home from './components/Home'
+import Home from './components/Home';
+import Profile from './components/Profile';
 import DashboardContainer from './containers/DashboardContainer';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
@@ -19,6 +20,11 @@ class App extends Component {
             exact
             path="/home"
             component={Home}
+          />
+          <Route
+            exact
+            path="/profile"
+            component={Profile}
           />
           <Route
             path="/dashboard"

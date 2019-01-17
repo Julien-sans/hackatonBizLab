@@ -1,0 +1,38 @@
+#Profile
+{
+  text-align: center;
+  margin-top: 10%;
+  background: linear-gradient(-45deg, #585858, #D8D8D8, #BDBDBD, #1C1C1C);
+  background-size: 200%;
+  background-position: 0 90%;
+  overflow: hidden;
+}
+
+#Profile div
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#Profile .circularPicture
+{
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#Profile .circularPicture img
+{
+  width: auto;
+  height: 100%;
+  margin-left: -70px;
+}
+
+#Profile .profile
+{
+  font-size: 40px;
+  border: 1px;
+}

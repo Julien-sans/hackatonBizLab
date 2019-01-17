@@ -17,7 +17,7 @@ class Menu extends Component {
               <Link to="" style={{ textDecoration: 'none' }}><li>Vue d'ensemble</li></Link>
             </ul>
             : ''}
-          <Link to="" style={{ textDecoration: 'none' }}><li className="my-2">Mon profil</li></Link>
+          <Link to="/profile" style={{ textDecoration: 'none' }}><li className="my-2">Mon profil</li></Link>
           <Link to="/forms" style={{ textDecoration: 'none' }}><li className="my-2">Créer un projet</li></Link>
         </ul>
       </div >
