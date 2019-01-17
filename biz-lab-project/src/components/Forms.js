@@ -44,7 +44,7 @@ class Forms extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { name, description, type, competence, lien, equipe, initiateur } = state;
+  const { name, description, type, competence, lien, equipe, initiateur } = state.forms;
   return {
     form: {
       name,
