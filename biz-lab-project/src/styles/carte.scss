@@ -6,6 +6,7 @@ $lightgrey: #6d6d6d;
 .card{
   box-shadow: 10px 10px 30px  grey;
   transition: 0.2s ease;
+  border: none;
   &:hover{
     box-shadow: 20px 20px 30px  grey;
     transition: 0.2s ease;
