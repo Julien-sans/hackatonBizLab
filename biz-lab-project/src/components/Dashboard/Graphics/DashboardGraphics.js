@@ -8,14 +8,16 @@ const doughnutData = {
 	labels: [
 		'Chat',
 		'Chat vocal',
-		'Google Drive',
+		'Vscode',
+		'Blender'
 	],
 	datasets: [{
-		data: [300, 50, 100],
+		data: [300, 50, 100, 20],
 		backgroundColor: [
 			'#FF6384',
 			'#36A2EB',
-			'#FFCE56'
+			'#FFCE56',
+			'black'
 		],
 		hoverBackgroundColor: [
 			'#FF6384',
@@ -26,7 +28,7 @@ const doughnutData = {
 };
 
 const barData = {
-	labels: ['Projet #1', 'Projet #2', 'Projet #3', 'Projet #4', 'Projet #5', 'Projet #6'],
+	labels: ['NGC', 'ABMP', 'CrowdCraft', 'DTech'],
 	datasets: [
 		{
 			label: 'Projets les plus commentés',
@@ -35,7 +37,7 @@ const barData = {
 			borderWidth: 1,
 			hoverBackgroundColor: 'rgb(255,99,132)',
 			hoverBorderColor: 'rgb(255,99,132)',
-			data: [65, 59, 80, 81, 56, 55, 40]
+			data: [10, 30, 81, 50]
 		}
 	]
 };
@@ -62,7 +64,7 @@ const lineData = {
 			pointHoverBorderWidth: 2,
 			pointRadius: 1,
 			pointHitRadius: 10,
-			data: [65, 59, 80, 81, 56, 55, 40, 12, 45, 30, 58, 62, 75, 75, 75, 48, 30, 35, 19, 22, 28, 45, 56, 54, 50, 60, 62, 57, 40, 36, 42, 47]
+			data: [65, 59, 80, 81, 56, 55, 40, 12, 45, 30, 58, 62, 75, 75, 75, 48, 30, 35]
 		}
 	]
 };
