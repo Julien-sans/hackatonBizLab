@@ -18,7 +18,7 @@ class Menu extends Component {
               <Link to="/dashboard#mesprojets" style={{ textDecoration: 'none' }}><li className="mb-1">Mes projets</li></Link>
             </ul>
             : ''}
-            <Link to="" style={{ textDecoration: 'none' }}><li className="my-2">Mon profil</li></Link>
+            <Link to="/profile" style={{ textDecoration: 'none' }}><li className="my-2">Mon profil</li></Link>
             <Link to="/forms" style={{ textDecoration: 'none' }}><li className="my-2">Créer un projet</li></Link>
             <Link to="/" style={{ textDecoration: 'none' }}><li className="my-2"><Button className="mt-5" color="secondary">SE DECONNECTER</Button></li></Link>            
           </ul>
