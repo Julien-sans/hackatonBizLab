@@ -24,26 +24,26 @@ class Profile extends Component {
               </div>
               </Col>
               <Col lg='12'>
-                <div className="circularPicture">
-                  <img src="https://cache.cosmopolitan.fr/data/photo/w650_c17/47/photo-retro-humour-large.jpg" alt="Photo de profil" />
+                <div>
+                  <img className="rounded-circle" src="https://66.media.tumblr.com/avatar_9cc8b64575a4_512.pnj" style={{width: '20%'}} alt="Photo de profil" />
                 </div>
                 <div className="profileList">
-                  Doe
+                  Spessoto
               </div>
                 <div className="profileList">
-                  John
+                  Eva
               </div>
                 <div className="profileList">
-                  john.doe@gmail.com
+                  eva.spessoto@gmail.com
               </div>
                 <div className="profileList">
-                  Graphiste
+                  Graphiste/Développeuse
               </div>
                 <div className="profileList">
                   01 23 45 67 89
               </div>
                 <div className="profileList">
-                  PhotoShop / Pixen / Procreate
+                  PhotoShop / Indesign / Illustrator / JavaScript / React / NodeJS
               </div>
                 <div>
                   <Button>

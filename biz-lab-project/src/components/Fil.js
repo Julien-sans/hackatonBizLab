@@ -4,23 +4,57 @@ import '../styles/fil.scss';
 import Carte from './Carte';
 
 class Fil extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      projet: [],
+      filter: '',
+    };
+  }
+  
+  componentDidMount() {
+    const projet = require('../data/project.json');
+    this.setState({
+      projet: projet
+    })
+  }
+  
+  handleChange = e => this.setState({ filter: e.target.value });
+  
   render() {
-    const { expanded, projects } = this.props;
+    let { expanded, projects } = this.props;
     const className = expanded ? 'fil' : 'fil fil--expanded';
+    let projet = this.state.projet;
+    console.log(projet)
+    
+    if (this.state.filter) {
+      projects = projects.filter(item =>
+        item.type.toLowerCase().includes(this.state.filter.toLowerCase()),
+      );
+    }   
+    
     return (
       <div className={className}>
+        <div className="mt-5">
+          <h1 className="mx-auto">Fil d'actualité</h1>
+        </div>
+        <hr/>
+        <div className="list-item-names-container mt-5 w-50">
+          <input className="form-control" placeholder="FILTRER LES PROJETS PAR TYPE" type="text" onChange={this.handleChange} />
+        </div>
         {
-          projects && projects.map(project =>
+          projects && projects.reverse().map(project =>
             <Carte project={project} />
           )}
-      </div>
-    );
+        </div>
+      );
+    }
   }
-}
-
-const mapStateToProps = state => ({
-  expanded: state.aside.expanded,
-  projects: state.forms.project
-})
-
-export default connect(mapStateToProps)(Fil);
+  
+  const mapStateToProps = state => ({
+    expanded: state.aside.expanded,
+    projects: state.forms.project
+  })
+  
+  export default connect(mapStateToProps)(Fil);

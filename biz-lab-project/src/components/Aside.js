@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import SearchInput, { createFilter } from 'react-search-input'
 import '../styles/home.scss';
 import Menu from '../components/Menu';
 import { toggleSidebar } from '../actions/aside';
@@ -49,20 +50,20 @@ class Aside extends Component {
             </Row>
           </Container>
         </div>
-      </div>
-    );
+      );
+    }
   }
-}
 
-const mapStateToProps = state => ({
-  expanded: state.aside.expanded
-})
+  const mapStateToProps = state => ({
+    expanded: state.aside.expanded,
+    project: state.forms.project
+  })
 
-const mapDispatchToProps = {
-  toggleSidebar
-}
+  const mapDispatchToProps = {
+    toggleSidebar
+  }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Aside);
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Aside);

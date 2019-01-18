@@ -33,7 +33,10 @@ class Forms extends Component {
       <div className="wrapper">
         <Aside />
         <div class="cont" className={className}>
-          <h1 className="projectTitle">PROJECT CREATION</h1>
+          <div className="mt-5">
+            <h1 className="mx-auto">Créer un projet</h1>
+          </div>
+          <hr/>
           <form className="form" onSubmit={this.handleSubmit}>
             <input onChange={this.handleChange} name="name" className="my-4" type="text" placeholder="NOM DU PROJET"></input>
             <textarea onChange={this.handleChange} name="description" className="projectDescription my-4" type="text" placeholder="DESCRIPTION DU PROJET"></textarea>
