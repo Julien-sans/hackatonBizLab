@@ -40,7 +40,7 @@ class Fil extends Component {
           <input className="form-control" placeholder="FILTRER LES PROJETS PAR TYPE" type="text" onChange={this.handleChange} />
         </div>
         {
-          projects && projects.map(project =>
+          projects && projects.reverse().map(project =>
             <Carte project={project} />
           )}
         </div>

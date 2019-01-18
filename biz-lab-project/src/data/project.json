@@ -1,28 +1,28 @@
 [
   {
     "id": 1,
-    "name": "Crowd Craft",
-    "description": "Et eodem impetu Domitianum praecipitem per scalas itidem funibus constrinxerunt, eosque coniunctos per ampla spatia civitatis acri raptavere discursu. iamque artuum et membrorum divulsa conpage superscandentes corpora mortuorum ad ultimam truncata deformitatem velut exsaturati mox abiecerunt in flumen.Ex turba vero imae sortis et paupertinae in tabernis aliqui pernoctant vinariis, non nulli velariis umbraculorum theatralium latent, quae Campanam imitatus lasciviam Catulus in aedilitate sua suspendit omnium primus; aut pugnaciter aleis certant turpi sono fragosis naribus introrsum reducto spiritu concrepantes; aut quod est studiorum omnium maximum ab ortu lucis ad vesperam sole fatiscunt vel pluviis, per minutias aurigarum equorumque praecipua vel delicta scrutantes.",
+    "name": "New Generation Communication",
+    "description": "Le plan de communication est la traduction opérationnelle et structurée des actions de communication relatives à un projet. Il constitue le cadre de référence pour toutes les communications du projet. Pour l’élaborer, vous pouvez utiliser une méthode en 7 étapes, basée sur le principe du processus d’amélioration continue. Il s’agit d’un procédé itératif : le plan de communication suit le rythme du projet, s’adapte et évolue au gré des nécessités du projet.",
     "type": "Communication",
-    "competences": "JavaScript, React, Node.js, WebDesign, PHP",
+    "competences": "Trello, Photoshop, Indesign, Illustrator",
     "github": "https://github.com/Julien-sans/hackatonBizLab",
     "equipe": "Maitetxu, Eva, Alexis, Nelson, Julien",
-    "initiateur": "Jean, Jose-Luis, Mina"
+    "initiateur": "Julien"
   },
   {
     "id": 2,
-    "name": "Airbus BizLab project",
-    "description": "Et eodem impetu Domitianum praecipitem per scalas itidem funibus constrinxerunt, eosque coniunctos per ampla spatia civitatis acri raptavere discursu. iamque artuum et membrorum divulsa conpage superscandentes corpora mortuorum ad ultimam truncata deformitatem velut exsaturati mox abiecerunt in flumen.Ex turba vero imae sortis et paupertinae in tabernis aliqui pernoctant vinariis, non nulli velariis umbraculorum theatralium latent, quae Campanam imitatus lasciviam Catulus in aedilitate sua suspendit omnium primus; aut pugnaciter aleis certant turpi sono fragosis naribus introrsum reducto spiritu concrepantes; aut quod est studiorum omnium maximum ab ortu lucis ad vesperam sole fatiscunt vel pluviis, per minutias aurigarum equorumque praecipua vel delicta scrutantes.",
+    "name": "Airbus BizLab Market Project",
+    "description": "Le chef de projet marketing est le chef d’orchestre d’une équipe Marketing chargée d’un projet. Il coordonne l’ensemble du travail afin que les délais et le budget soient respectés. Il supervise, décide, et gère comment son équipe doit travailler et quels sont ses objectifs. Le ou la chef(fe) de projet est également le 1er interlocuteur des prestataires et clients liés au projet. C’est lui qui assure le suivi du dossier et entretien la relation avec les partenaires. Sa gestion du projet doit prendre en compte les délais et budgets définis dans l’avant projet. ",
     "type": "Marketing",
     "competences": "Google analytics, wordpress",
     "github": "https://github.com/",
-    "equipe": "Justine, Eva, Maitetxu, Chloé",
+    "equipe": "Justine, Eva, Maitetxu, Chloé, Alain",
     "initiateur" : "Alain"
   },
   {
     "id": 3,
-    "name": "Helicopter Marignagne",
-    "description": "Et eodem impetu Domitianum praecipitem per scalas itidem funibus constrinxerunt, eosque coniunctos per ampla spatia civitatis acri raptavere discursu. iamque artuum et membrorum divulsa conpage superscandentes corpora mortuorum ad ultimam truncata deformitatem velut exsaturati mox abiecerunt in flumen.Ex turba vero imae sortis et paupertinae in tabernis aliqui pernoctant vinariis, non nulli velariis umbraculorum theatralium latent, quae Campanam imitatus lasciviam Catulus in aedilitate sua suspendit omnium primus; aut pugnaciter aleis certant turpi sono fragosis naribus introrsum reducto spiritu concrepantes; aut quod est studiorum omnium maximum ab ortu lucis ad vesperam sole fatiscunt vel pluviis, per minutias aurigarum equorumque praecipua vel delicta scrutantes.",
+    "name": "Drône technologie",
+    "description": "Un développeur web est un programmeur spécialisé, ou expressément impliqué dans le développement des applications du World Wide Web, ou des applications qui sont exécutées à partir d'un serveur web sur un navigateur web et qui utilisent le protocole HTTP comme vecteur de transmission de l'information.",
     "type": "Développement",
     "competences": "PHP, Python, JavaScript, HTML, CSS",
     "github": "https://github.com/",
