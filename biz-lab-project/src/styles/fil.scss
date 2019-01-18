@@ -1,0 +1,9 @@
+.fil {
+  margin-left: 480px;
+  transition: 300ms ease-in-out;
+  max-width: 50%;
+  &--expanded {
+      margin-left: 228px;
+      max-width: 70%;
+    }
+}
