@@ -18,18 +18,19 @@ class Carte extends Component {
       bgColor: ""
     }
   }
-  
-onClickButton = (event) => {
+
+  onClickButton = (event) => {
     ToastStore.success("Projet ajouté avec succès !")
     this.setState({
       bgColor: "green"
     })
+  }
 
-  componentDidMount () {
+  componentDidMount() {
     const key = `commentaire-${this.props.project.id}`;
     const com = JSON.parse(localStorage.getItem(key))
-    if(com) {
-      this.setState({commentaires: com})
+    if (com) {
+      this.setState({ commentaires: com })
     }
   }
 
@@ -116,5 +117,6 @@ onClickButton = (event) => {
     )
   }
 }
+
 
 export default Carte;

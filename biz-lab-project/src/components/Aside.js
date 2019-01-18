@@ -17,7 +17,7 @@ class Aside extends Component {
           <Container>
             <Row>
               <Col xs="9">
-                <Link to="home" style={{textDecoration: 'none'}}><img src={LogoCrowdCraft} className="w-100 pt-3 pb-3" alt="Logo Crowd Craft" /></Link>
+                <Link to="home" style={{ textDecoration: 'none' }}><img src={LogoCrowdCraft} className="w-100 pt-3 pb-3" alt="Logo Crowd Craft" /></Link>
               </Col>
               <Col xs="3" onClick={toggleSidebar}>
                 {
@@ -50,20 +50,21 @@ class Aside extends Component {
             </Row>
           </Container>
         </div>
-      );
-    }
+      </div>
+    );
   }
+}
 
-  const mapStateToProps = state => ({
-    expanded: state.aside.expanded,
-    project: state.forms.project
-  })
+const mapStateToProps = state => ({
+  expanded: state.aside.expanded,
+  project: state.forms.project
+})
 
-  const mapDispatchToProps = {
-    toggleSidebar
-  }
+const mapDispatchToProps = {
+  toggleSidebar
+}
 
-  export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Aside);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Aside);
