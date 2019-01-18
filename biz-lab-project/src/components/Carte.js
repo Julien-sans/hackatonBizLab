@@ -12,7 +12,7 @@ class Carte extends Component {
     super(props);
     this.state = {
       nom: 'John Doe',
-      commentaires : [],
+      commentaires: [],
       bgColor: ""
     }
   }
@@ -40,7 +40,12 @@ class Carte extends Component {
             <CardText className="text mt-2 mx-5"><u>Team :</u> {this.props.project.equipe}</CardText>
             <CardText className="text mt-3 mx-5">{this.props.project.github}</CardText>
             <CardText
-            className="text d-flex justify-content-end">
+              className="text d-flex justify-content-end">
+              <a
+                target="blank_"
+                className="d-flex mr-3 mt-2 justify-content-end"
+                href="https://code.visualstudio.com/docs">Voir la documentation
+              </a>
               <Button
                 style={{
                   backgroundColor: 'white',
