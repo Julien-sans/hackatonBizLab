@@ -16,6 +16,7 @@ class Carte extends Component {
     }
   }
 
+
   componentDidMount () {
     const key = `commentaire-${this.props.project.id}`;
     const com = JSON.parse(localStorage.getItem(key))
