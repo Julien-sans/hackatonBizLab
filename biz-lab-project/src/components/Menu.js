@@ -12,14 +12,14 @@ class Menu extends Component {
       <div>
         <ul className="ml-5">
           <Link to="/home" style={{ textDecoration: 'none' }}><li className="my-2">Fil d'actualité</li></Link>
-          <li className="my-2" style={{ cursor: "pointer" }} onClick={underMenu}>Mon dashboard&nbsp;&nbsp;&nbsp;<i class="fas fa-caret-down"></i></li>          {isUnderMenuOpen ?
+          <Link to="/forms" style={{ textDecoration: 'none' }}><li className="my-2">Créer un projet</li></Link>
+          <Link to="/profile" style={{ textDecoration: 'none' }}><li className="my-2">Mon profil</li></Link>
+          <li className="my-2 mt-3" style={{ cursor: "pointer" }} onClick={underMenu}>Mon dashboard&nbsp;&nbsp;&nbsp;<i class="fas fa-caret-down"></i></li>          {isUnderMenuOpen ?
             <ul className="ml-4">
               <Link to="/dashboard#vuedensemble" style={{ textDecoration: 'none' }}><li>Vue d'ensemble</li></Link>
               <Link to="/dashboard#mesprojets" style={{ textDecoration: 'none' }}><li className="mb-1">Mes projets</li></Link>
             </ul>
             : ''}
-            <Link to="/profile" style={{ textDecoration: 'none' }}><li className="my-2">Mon profil</li></Link>
-            <Link to="/forms" style={{ textDecoration: 'none' }}><li className="my-2">Créer un projet</li></Link>
             <Link to="/" style={{ textDecoration: 'none' }}><li className="my-2"><Button className="mt-5" color="secondary">SE DECONNECTER</Button></li></Link>            
           </ul>
         </div >
