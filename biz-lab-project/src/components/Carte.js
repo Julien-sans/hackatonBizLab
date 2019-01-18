@@ -20,7 +20,7 @@ class Carte extends Component {
   onClickButton = (event) => {
     ToastStore.success("Projet ajouté avec succès !")
     this.setState({
-      bgColor: "rgb(220,220,220)"
+      bgColor: "green"
     })
   }
 
