@@ -19,7 +19,11 @@ class Aside extends Component {
                 <Link to="home" style={{textDecoration: 'none'}}><img src={LogoCrowdCraft} className="w-100 pt-3 pb-3" alt="Logo Crowd Craft" /></Link>
               </Col>
               <Col xs="3" onClick={toggleSidebar}>
-                <i style={{ cursor: 'pointer' }} className="fas fa-bars mt-4 ml-3"></i>
+                {
+                  expanded
+                    ? <i style={{ cursor: 'pointer' }} className="fas fa-chevron-left mt-4 ml-3"></i>
+                    : <i style={{ cursor: 'pointer' }} className="fas fa-chevron-right mt-4 ml-3"></i>
+                }
               </Col>
             </Row>
             <Row>
