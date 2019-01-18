@@ -29,6 +29,7 @@ class Carte extends Component {
             <CardText className="text mt-4 mx-5">{this.props.project.description}</CardText>
             <CardText className="text mt-2 mx-5"><u>Team :</u> {this.props.project.equipe}</CardText>
             <CardText className="text mt-3 mx-5">{this.props.project.github}</CardText>
+            <CardText className="text d-flex justify-content-end"><Button style={{ backgroundColor: 'white', color: 'grey' }}>Installation du projet</Button></CardText>
           </CardBody>
         </Card>
       </div>
