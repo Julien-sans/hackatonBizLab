@@ -36,6 +36,10 @@ class Fil extends Component {
     
     return (
       <div className={className}>
+        <div className="mt-5">
+          <h1 className="mx-auto">Fil d'actualité</h1>
+        </div>
+        <hr/>
         <div className="list-item-names-container mt-5 w-50">
           <input className="form-control" placeholder="FILTRER LES PROJETS PAR TYPE" type="text" onChange={this.handleChange} />
         </div>
