@@ -6,13 +6,6 @@ import {
 import '../styles/carte.scss';
 
 class Carte extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      nom: 'John Doe',
-      commentaires : []
-    }
-  }
 
   render() {
     return (
