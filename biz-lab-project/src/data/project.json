@@ -28,5 +28,15 @@
     "github": "https://github.com/",
     "equipe": "Florian, Christophe, Tom",
     "initiateur" : "Tom"
+  },
+  {
+    "id": 4,
+    "name": "Crowd Craft",
+    "description": "Contribuer à l'émergence et à l'élaboration en concertation avec les acteurs institutionnels de projets individuels ou collectifs de développement. Jour après jour les gouvernements, institutions publiques, les agences de développement ainsi que d'autres acteurs travaillant en faveur du développement économique et social en Amérique latine et dans les Caraïbes, font face à un défi majeur. Il s'agit de savoir comment transformer les propositions en réalités concrètes qui puissent améliorer le bien-être de la société et d'atteindre les résultats avec le temps et les ressources disponibles.",
+    "type": "Développement",
+    "competences": "Ruby, Java",
+    "github": "https://github.com/",
+    "equipe": "Pierre, Paul, Jean",
+    "initiateur" : "Pierre"
   }
 ]
